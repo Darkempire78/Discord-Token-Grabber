@@ -31,7 +31,7 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-This project is under [GPLv3](https://github.com/Darkempire78/Raid-Protect-Discord-Bot/blob/master/LICENSE).
+This project is under [GPLv3](https://github.com/Darkempire78/Discord-Token-Grabber/blob/master/LICENSE).
 
 # Python version
 A similar version coded in python also exists [here](https://github.com/wodxgod/Discord-Token-Grabber).
