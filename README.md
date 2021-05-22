@@ -3,7 +3,7 @@
 <a href="https://discord.com/invite/sPvJmY7mcV"><img src="https://img.shields.io/discord/831524351311609907?color=%237289DA&label=DISCORD&style=for-the-badge"></a>
 
 # Discord Token Grabber
-Get your personal Discord token automatically.
+Get your personal Discord token easily.
 
 ## Installation
 No package required!
