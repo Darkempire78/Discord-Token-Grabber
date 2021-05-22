@@ -14,8 +14,8 @@ Run the script: `node index`
 Grab your personal Discord token automatically from Discord, Discord Canary, Discord PTB, Chrome, Opera, Brave and Yandex
 
 - [x] Windows support
-- [ ] Linux Support
-- [ ] MacOS Support
+- [ ] Linux support
+- [ ] MacOS support
 
 ## Discord
 
